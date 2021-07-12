@@ -8,7 +8,7 @@
   <a href="//github.com/kkrypt0nn/Python-Discord-Bot-Template/blob/main/LICENSE.md"><img src="https://img.shields.io/github/license/kkrypt0nn/Python-Discord-Bot-Template"></a>
   <a href="//github.com/kkrypt0nn/Python-Discord-Bot-Template"><img src="https://img.shields.io/github/languages/code-size/kkrypt0nn/Python-Discord-Bot-Template"></a>
   <a href="//github.com/kkrypt0nn/Python-Discord-Bot-Template/issues"><img src="https://img.shields.io/github/issues-raw/kkrypt0nn/Python-Discord-Bot-Template"></a>
-  <a href="https://repl.it/badge/github/kkrypt0nn/Python-Discord-Bot-Template"><img src="(https://repl.it/github/kkrypt0nn/Python-Discord-Bot-Template">
+  <a href="https://repl.it/github/kkrypt0nn/Python-Discord-Bot-Template"><img src="https://repl.it/badge/github/kkrypt0nn/Python-Discord-Bot-Template">
 </p>
 
 This repository is a template that everyone can use for the start of their discord bot.

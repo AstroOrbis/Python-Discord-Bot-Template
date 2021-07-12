@@ -1,6 +1,5 @@
 import json
 
-
 def add_user_to_blacklist(user_id: int):
     with open("blacklist.json", "r+") as file:
         file_data = json.load(file)

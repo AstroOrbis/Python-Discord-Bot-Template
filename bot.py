@@ -11,6 +11,7 @@ import os
 import platform
 import random
 import sys
+from better_profanity import profanity
 
 import discord
 from discord.ext import commands, tasks
@@ -98,6 +99,12 @@ async def on_message(message):
         blacklist = json.load(file)
     if message.author.id in blacklist["ids"]:
         return
+    # Deletes message if it contains profanity (Set censorProfanity to True in config.json)
+    if profanity.contains_profanity(message.content) and config["censorProfanity"] == "True":
+        print(f'Message {message.id} contains profanity, deleting!')
+        await message.delete()
+        return
+
     await bot.process_commands(message)
 
 
