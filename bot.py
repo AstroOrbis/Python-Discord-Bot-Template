@@ -104,7 +104,6 @@ async def on_message(message):
         print(f'Message {message.id} contains profanity, deleting!')
         await message.delete()
         return
-
     await bot.process_commands(message)
 
 

@@ -174,6 +174,40 @@ class moderation(commands.Cog, name="moderation"):
         )
         await context.send(embed=embed)
 
+    @commands.command(name="hackban")
+    @commands.has_permissions(ban_members=True)
+    async def hackban(self, context, id):
+        """
+        Bans a user ID that isn't in your server yet.
+        """
+        try:
+          id = int(id)
+        except:
+          embed = discord.Embed(
+            title="Error!",
+            description=f"`{id}` is not a valid user ID.",
+            color=0xE02B2B
+          )
+          await context.send(embed=embed)
+          return
+
+        try:
+          await context.guild.ban(id)
+          embed = discord.Embed(
+            title="ID banned!",
+            description=f"User ID **{id}** was hackbanned!",
+            color=0x42F56C
+          )
+          await context.send(embed=embed)
+
+        except:
+          embed = discord.Embed(
+            title="Error!",
+            description=f"`{id}` is not a valid user ID.",
+            color=0xE02B2B
+          )
+          await context.send(embed=embed)
+          return
 
 def setup(bot):
     bot.add_cog(moderation(bot))
