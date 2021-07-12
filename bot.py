@@ -52,10 +52,7 @@ intents.presences = True
 intents.members = True
 """
 
-intents = discord.Intents.default()
-
-bot = Bot(command_prefix=config["bot_prefix"], intents=intents)
-
+bot = Bot(command_prefix=config["bot_prefix"], intents=discord.Intents.default())
 
 # The code in this even is executed when the bot is ready
 @bot.event
@@ -71,7 +68,7 @@ async def on_ready():
 # Setup the game status task of the bot
 @tasks.loop(minutes=1.0)
 async def status_task():
-    statuses = ["with you!", "with Krypton!", f"{config['bot_prefix']}help", "with humans!"]
+    statuses = config["statuses"]
     await bot.change_presence(activity=discord.Game(random.choice(statuses)))
 
 
@@ -144,7 +141,6 @@ async def on_command_error(context, error):
         )
         await context.send(embed=embed)
     raise error
-
 
 # Run the bot with the token
 bot.run(config["token"])
