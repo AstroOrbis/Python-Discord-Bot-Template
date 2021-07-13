@@ -1,6 +1,6 @@
 # Updates List
 
-Here is the list of all the updates that I made on this template.
+## Here is the list of all the updates that I made on this template.
 
 ### Version 2.8
 
