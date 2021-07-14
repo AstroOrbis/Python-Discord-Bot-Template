@@ -15,11 +15,7 @@ from discord.ext import commands
 
 from helpers import json_manager
 
-if not os.path.isfile("config.json"):
-    sys.exit("'config.json' not found! Please add it and try again.")
-else:
-    with open("config.json") as file:
-        config = json.load(file)
+config = json_manager.loadConfig()
 
 
 class owner(commands.Cog, name="owner"):
